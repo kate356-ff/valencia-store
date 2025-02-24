@@ -1,0 +1,293 @@
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+body {
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+    background-color: aliceblue;
+    min-height: 100px;
+
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+/* catalog */
+
+.catalog {
+    display: flex;
+    flex-direction: row;
+}
+
+.catalog__filter {
+    width: 350px;
+    flex-shrink: 0;
+    outline: 1px solid black;
+}
+
+.catalog__sort {
+    background-color: aliceblue;
+    min-height: 40px;
+}
+
+.catalog__content {
+    flex-grow: 1;
+}
+
+.catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex: 3;
+}
+
+
+
+/* cards */
+
+.catalog__card {
+    width: 100%;
+    background-color: white;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid black;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between;
+}
+
+.catalog__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.catalog__img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.catalog__card:hover .catalog__img {
+    transform: scale(1.1);
+}
+
+.catalog__name, .catalog__title {
+    padding: 10px;
+    text-align: center;
+}
+
+
+.catalog__btn {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 45px;}
+
+.catalog__btn:hover {
+    background-color: #333;
+}
+
+.img__wrapper {
+    overflow: hidden;
+}
+
+
+
+.color__options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /* padding: 6px; */
+}
+
+.color__option {
+    width: 25px;
+    height: 25px; 
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.color__option:hover,
+.size__option:hover {
+    transform: scale(1.1);
+}
+
+.size__options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.size__option {
+    width: 30px;
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.size__option:hover {
+    background-color: #ddd;
+}
+
+
+/* filtres */
+
+.catalog__filter {
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+.filter__section {
+    margin-bottom: 20px;
+}
+
+.filter__section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.filter__section label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.filter__section input[type="range"] {
+    width: 100%;
+}
+
+.filter__section input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+.price__range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price__input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 145px;
+    transition: border-color 0.3s ease;
+}
+
+.price__input:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.price__separator {
+    font-size: 14px;
+    color: #333;
+}
+
+.price__hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+/* sort */
+
+.catalog__sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+    border-left: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort__options {
+    display: flex;
+    gap: 10px;
+}
+
+.sort__button {
+    padding: 8px 12px;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sort__button.active {
+    color: black;
+    transform: scale(1.05);
+}
+
+.sort__button:hover {
+    color: black;
+}
+
+
