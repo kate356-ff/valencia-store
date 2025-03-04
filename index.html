@@ -11,7 +11,21 @@
 <body>
     
     <header>
-        <h1>Elysian Couture</h1>
+        <div class="container--header">
+            <h1>Valencia</h1>
+            <nav class="nav--header">
+                <a href="#" class="nav__link">EXPLORE</a>
+                <a href="#" class="nav__link">WOMEN</a>
+                <a href="#" class="nav__link">MEN</a>
+                <a href="#" class="nav__link">BAGS</a>
+                <a href="#" class="nav__link">COUTURE</a>
+            </nav>
+            <div class="icons--header">
+                <a href="#" class="nav__link">LOGIN</a>
+                <a href="#" class="icon__link"><i class="bi bi-heart"></i></a>
+                <a href="#" class="icon__link"><i class="bi bi-cart"></i></a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -135,7 +149,26 @@
                             </div>
                         </div>
                     </div>
+                    
+                <div class="pagination">
+                    <a href="#" class="pagination__link prev">← Previous</a>
+                    <a href="#" class="pagination__link">1</a>
+                    <a href="#" class="pagination__link active">2</a>
+                    <a href="#" class="pagination__link">3</a>
+                    <a href="#" class="pagination__link">4</a>
+                    <a href="#" class="pagination__link">5</a>
+                    <a href="#" class="pagination__link next">Next →</a>
                 </div>
+
+                </div>
+
+
+
+
+
+                
+
+
 
                 
                 <div class="catalog__filter">
@@ -147,8 +180,31 @@
                             <span class="price__separator">-</span>
                             <input type="number" class="price__input" placeholder="To" min="0" max="150000" step="1000">
                         </div>
-                        <p class="price__hint">Enter values between 0 and 150000</p>
+                        <p class="price__hint">Enter values between 0 and 50000 €</p>
                     </div>
+
+                    <div class="filter__section">
+                        <h4>Color</h4>
+                        <div class="filter-color">
+                            <div class="filter-color__item">
+                                 <input class="filter-color__checkbox" type="checkbox" name="color-black" id="color-black"> 
+                                <label class="filter-color__label focus" id="color-black-label" for="color-black" aria-label="Черный цвет" role="checkbox" tabindex="0" aria-checked="false" style="background-color: #000;"></label>
+                            </div>
+
+                            <div class="filter-color__item">
+                                <input class="filter-color__checkbox" type="checkbox" name="color-grey" id="color-grey"> 
+                                <label class="filter-color__label focus" id="color-grey-label"  for="color-grey" aria-label="Серый цвет" role="checkbox" tabindex="0" aria-checked="false" style="background-color: #555;"></label>
+                            </div>
+
+                            <div class="filter-color__item">
+                                 <input class="filter-color__checkbox" type="checkbox" name="color-lightgrey" id="color-lightgrey"> 
+                                <label class="filter-color__label focus" id="color-lightgrey-label"  for="color-lightgrey" aria-label="Светло-серый цвет" role="checkbox" tabindex="0" aria-checked="false" style="background-color: #888;"></label>
+                            </div>
+
+
+                        </div>
+                    </div>
+
                     <div class="filter__section">
                         <h4>Size</h4>
                         <label><input type="checkbox" name="size" value="34">XS</label>
@@ -164,6 +220,11 @@
                     </div>
                 </div>
 
+
+
+
+               
+
             </div>
         </section>
     </main>
@@ -172,6 +233,7 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/checkbox.js"></script>
 
 
 </body>
