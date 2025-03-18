@@ -232,7 +232,7 @@ h1 {
 }
 
 .size__option:hover {
-    background-color: #ddd;
+    background-color: #e0e8f1;
 }
 
 
@@ -440,6 +440,46 @@ h3 {
 
 /* next page -> card product */
 
+.container__nav {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid black;
+}
+
+.nav__second {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav__second::after,
+.nav__second:hover {
+    text-decoration: underline;
+}
+
+
+
+hr {
+    color: #000;
+    width: 100%;
+    border: none;
+    border-top: 1px double #000000;
+    height: 5px;
+    margin: 10px 0;
+}
+
+
+.catalog__material,
+.catalog__price,
+h4 {
+    margin: 10px 0;
+}
+
+
+
 .product--img__wrapper {
     display: flex;
     flex-direction: column;
@@ -460,7 +500,7 @@ h3 {
     align-items: center;
     width: 50%;
     background-color: white;
-    padding: 20px;
+    padding: 20px 180px;
     outline: 1px solid black;
 }
 .product__content {
@@ -468,6 +508,28 @@ h3 {
     flex-direction: row;
 
 }
-.catalog__price {
+
+.sizes {
+    display: flex;
+    gap: 10px;
     padding: 10px;
+}
+.size-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.size-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
