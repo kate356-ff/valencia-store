@@ -31,9 +31,11 @@
     <main>
     <div class="container container__cart">
         <div class="cart-header"><h1>CART</h1>
-        <p class="delivery-info">Complementary delivery, returns & exchanges via FedEx.</p></div>
+        <p class="delivery-info">Complementary delivery, returns & exchanges via FedEx.</p>
+        <hr></div>
         
-        <!-- <div class="text--saveditems"><h2>SAVED ITEMS</h2></div> -->
+        <h2>SAVED ITEMS</h2>
+        
         <div class="cart-item">
             <div class="item-image">
                 <img src="img/jacket1.avif" alt="BALENCIAGA ZIP UP JACKET">
@@ -59,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <hr>
+
 
         <div class="cart-item">
             <div class="item-image">
@@ -86,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <hr>
+
 
         <div class="cart-item">
             <div class="item-image">
@@ -113,6 +115,7 @@
                 </div>
             </div>
         </div>
+
         <hr>
         
         
@@ -120,28 +123,222 @@
             <strong>FOR SIGNATURE PACKAGING:</strong> Your order will return in our signature packaging. By selecting the gift option at checkout, a ribbon and a personalised message will be added.
         </div>
         
-        <div class="promo-code-section">
-            <h2>Do you have a promo code?</h2>
-            <input type="text" class="number promocode__input" placeholder="Promo code">
-        </div> 
+        <div class="zip-code-section">
+            <h2>Enter ZIP Code:</h2>
+            <input type="text" class="zip-input" placeholder="ZIP Code">
+        </div>
         
         <table class="summary-table">
             <tr>
-                <td>Shipping cost</td>
-                <td>2 400 €</td>
+                <td>Do you have a promo code?</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Subtotal</td>
+                <td>$ 2,000.00</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>$ 9.00</td>
             </tr>
             <tr>
                 <td>Sales Tax</td>
-                <td>160.00 €</td>
+                <td>$ 160.00</td>
             </tr>
             <tr class="total-row">
                 <td>ESTIMATED TOTAL</td>
-                <td>2 560 €</td>
+                <td>$ 2,169.00</td>
             </tr>
         </table>
-
-        <button onclick="window.location.href='basket.html'" class="add-to-card-btn">PROCEED TO CHECKOUT</button>
+        
+        <!-- <div class="promo-code">
+            <a href="#" class="promo-link">Have a promo code?</a>
+        </div> -->
     </div></main>
 </body>
 <script src="js/quantityselector.js"></script>
 </html>
+
+
+
+
+
+
+
+/* next page -> cart */
+
+.cart-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container__cart {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid black;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.delivery-info {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 30px 0 15px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.item-image {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-title {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.item-options {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 68px;
+    height: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 0 5px;
+}
+
+/* убрать стрелки */
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.save-for-later {
+    text-align: right;
+    margin: 15px 0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+.save-link,
+.edit-link,
+.delete-link {
+    color: #333;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.edit__delete {
+    display: flex;
+    flex-direction: row;
+}
+.edit-link {
+    padding-right: 10px;
+}
+.gift-options {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.zip-code-section {
+    margin: 30px 0;
+}
+
+.zip-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 200px;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.summary-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-table td:last-child {
+    text-align: right;
+}
+
+.total-row {
+    font-weight: 500;
+}
+
+.promo-code {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.promo-link {
+    color: #333;
+    text-decoration: underline;
+}
+
+

@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.accordion-content').forEach(content => {
                 if (content !== accordionContent && content.style.display === 'block') {
                     content.style.display = 'none';
-                    content.previousElementSibling.querySelector('i').className = 'bi bi-plus';
+                    content.previousElementSibling.querySelector('i').className = 'bi bi-caret-down-fill';
                 }
             });
             
             // Переключаем текущий аккордеон
             if (accordionContent.style.display === 'block') {
                 accordionContent.style.display = 'none';
-                icon.className = 'bi bi-plus';
+                icon.className = 'bi bi-caret-down-fill';
             } else {
                 accordionContent.style.display = 'block';
-                icon.className = 'bi bi-dash';
+                icon.className = 'bi bi-caret-up-fill';
             }
         });
     });
