@@ -14,16 +14,16 @@
         <div class="container--header">
             <h1>Valencia</h1>
             <nav class="nav--header">
-                <a href="#" class="nav__link">EXPLORE</a>
-                <a href="#" class="nav__link">WOMEN</a>
-                <a href="#" class="nav__link">MEN</a>
-                <a href="#" class="nav__link">BAGS</a>
-                <a href="#" class="nav__link">COUTURE</a>
+                <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
+                <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
+                <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
+                <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
+                <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
             </nav>
             <div class="icons--header">
                 <a href="#" class="nav__link">LOGIN</a>
-                <a href="#" class="icon__link"><i class="bi bi-heart"></i></a>
-                <a href="#" class="icon__link"><i class="bi bi-cart"></i></a>
+                <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
+                <a href="#" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
             </div>
         </div>
     </header>
@@ -31,9 +31,9 @@
     <main>
         <section>
             <div class="container catalog">
-
+                <h2 class="h2--invisible">Каталог товаров</h2>
                 <div class="catalog__content">
-
+                    
                     <div class="catalog__sort">
                         <label for="sort">Sort by:</label>
                         <div class="sort__options">
@@ -46,7 +46,7 @@
 
                     <div class="catalog__grid">
                         <div class="catalog__card">
-                            <div class="catalog__name">Women's Balenciaga Back Zip-up Jacket in Black</div>
+                            <div class="catalog__name"><h3>Women's Balenciaga Back Zip-up Jacket in Black</h3></div>
                             <div class="img__wrapper">
                                 <img class="catalog__img" src="img/jacket1.avif" alt="">
                             </div>
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="catalog__card">
-                            <div class="catalog__name">Women's Balenciaga Back Zip-up Jacket in Black</div>
+                            <div class="catalog__name"><h3>Women's Balenciaga Back Zip-up Jacket in Black</h3></div>
                             <div class="img__wrapper">
                                 <img class="catalog__img" src="img/jacket1.avif" alt="">
                             </div>
@@ -98,7 +98,7 @@
                         </div>
 
                         <div class="catalog__card">
-                            <div class="catalog__name">Women's Balenciaga Back Zip-up Jacket in Black</div>
+                            <div class="catalog__name"><h3>Women's Balenciaga Back Zip-up Jacket in Black</h3></div>
                             <div class="img__wrapper">
                                 <img class="catalog__img" src="img/jacket1.avif" alt="">
                             </div>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="catalog__card">
-                            <div class="catalog__name">Women's Balenciaga Back Zip-up Jacket in Black</div>
+                            <div class="catalog__name"><h3>Women's Balenciaga Back Zip-up Jacket in Black</h3></div>
                             <div class="img__wrapper">
                                 <img class="catalog__img" src="img/jacket1.avif" alt="">
                             </div>
@@ -172,9 +172,9 @@
 
                 
                 <div class="catalog__filter">
-                    <h3>Filters</h3>
+                    <h2>Filters</h2>
                     <div class="filter__section">
-                        <h4>Price</h4>
+                        <h3>Price</h3>
                         <div class="price__range">
                             <input type="number" class="price__input" placeholder="From" min="0" max="150000" step="1000">
                             <span class="price__separator">-</span>
@@ -184,7 +184,7 @@
                     </div>
 
                     <div class="filter__section">
-                        <h4>Color</h4>
+                        <h3>Color</h3>
                         <div class="filter-color">
                             <div class="filter-color__item">
                                  <input class="filter-color__checkbox" type="checkbox" name="color-black" id="color-black"> 
@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="filter__section">
-                        <h4>Size</h4>
+                        <h3>Size</h3>
                         <label><input type="checkbox" name="size" value="34">XS</label>
                         <label><input type="checkbox" name="size" value="36">S</label>
                         <label><input type="checkbox" name="size" value="38">M</label>
@@ -214,7 +214,7 @@
                         <label><input type="checkbox" name="size" value="38">XL</label>
                     </div>
                     <div class="filter__section">
-                        <h4>Material</h4>
+                        <h3>Material</h3>
                         <label><input type="checkbox" name="material" value="synthetic">Synthetic</label>
                         <label><input type="checkbox" name="material" value="cotton">Cotton</label>
                     </div>
