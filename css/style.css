@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 *, 
 *::after,
 *::before {
@@ -10,6 +12,7 @@ html,
 body {
     height: 100vh;
     min-height: 100vh;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -17,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -50,6 +52,7 @@ h1 {
 
 h3 {
     font-weight: lighter;
+    font-size: 16px;
 }
 
 .h2--invisible {
@@ -64,6 +67,10 @@ h3 {
     padding: 20px;
     background-color: #fff;
     outline: 1px solid black;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
 }
 
 h1 {
@@ -76,6 +83,10 @@ h1 {
 .nav--header {
     display: flex;
     gap: 20px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .nav__link,
@@ -122,15 +133,13 @@ h1 {
     flex-direction: row;
 }
 
-.catalog__filter {
-    width: 350px;
-    flex-shrink: 0;
-    outline: 1px solid black;
-}
-
 .catalog__sort {
     background-color: rgb(255, 255, 255);
     min-height: 40px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .catalog__content {
@@ -139,7 +148,7 @@ h1 {
 
 .catalog__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     flex: 3;
 }
 
@@ -148,44 +157,53 @@ h1 {
 /* cards */
 
 .catalog__card {
-    width: 100%;
+    width: 100%; 
+    height: 700px;
     background-color: white;
-    padding: 16px;
+    padding: 24px; 
     display: flex;
     flex-direction: column;
     outline: 1px solid black;
     overflow: hidden;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-    justify-content: space-between;
+    cursor: pointer;
 }
-
-/* .catalog__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-} */
 
 
 .catalog__img {
     width: 100%;
-    aspect-ratio: 1;
+    height: 100%;
     object-fit: cover;
-    height: auto;
     transition: transform 0.3s ease;
 }
 
 .catalog__card:hover .catalog__img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .catalog__name, .catalog__title {
     padding: 10px;
     text-align: center;
+    
 }
 
+h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
 
+h4 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}
 .catalog__btn {
-    font-size: 0.9rem;
-    font-weight: lighter;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +221,10 @@ h1 {
 }
 
 .img__wrapper {
+    width: 100%;
+    height: 150%;
     overflow: hidden;
+    position: relative;
 }
 
 
@@ -223,16 +244,16 @@ h1 {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.color__option:hover,
-.size__option:hover {
-    transform: scale(1.1);
-}
 
 .size__options {
     display: flex;
     gap: 10px;
     justify-content: center;
     padding: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .size__option {
@@ -242,22 +263,15 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.size__option:hover {
-    background-color: #e0e8f1;
 }
 
 
-/* filtres */
+
+
+/* filter */
 
 .catalog__filter {
-    padding: 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 1px;
 }
 
 h3 {
@@ -265,7 +279,8 @@ h3 {
 }
 
 .filter__section {
-    margin-bottom: 20px;
+    border-bottom: solid black 1px;
+    padding: 20px 15px;
 }
 
 .filter__section h4 {
@@ -322,8 +337,71 @@ h3 {
 }
 
 
+/* модальное окно фильтров */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 30%);
+    z-index: 1000;
+    justify-content: flex-end;
+}
+
+.modal-content {
+    background-color: white;
+    height: 100vh;
+    width: 650px;
+    max-width: 100%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
 
 
+.catalog__filter {
+    display: none;
+}
+
+
+.modal .catalog__filter {
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.filtres {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.header--filter {
+    padding: 20px 15px 19px;
+    border-bottom: solid black 1px;
+}
 
 
 /* sort */
@@ -331,10 +409,9 @@ h3 {
 .catalog__sort {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
-    border: 1px solid black;
-    border-bottom: none;
-    border-left: none;
+    border-top: 1px solid black;
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -374,9 +451,14 @@ h3 {
 .pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 10px;
     border-top: 1px solid #000000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
 }
 
 .pagination__link {
@@ -418,16 +500,11 @@ h3 {
 .filter-color__label {
     display: inline-block;
     position: relative;
-    width: 30px;
+    width: 100px;
     height: 30px;
     border: 1px solid #ffffff;
     transition: transform 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
-}
-
-.filter-color__label:hover,
-.filter-color__label:focus {
-    transform: scale(1.1);
 }
 
 .filter-color__checkbox:checked+.filter-color__label::after,
@@ -458,18 +535,26 @@ h3 {
 .container__nav {
     display: flex;
     flex-direction: row;
-    height: 60px;
+    min-height: 40px;
     align-items: center;
     background-color: #fff;
     outline: solid black 1px;
     position: fixed;
     width: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav__second {
     color: #000;
     text-decoration: none;
     padding: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav__second::after,
@@ -530,7 +615,7 @@ h4 {
 .product__content {
     display: flex;
     flex-direction: row;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 .sizes {
@@ -674,7 +759,6 @@ h2 {
     font-size: 18px;
     font-weight: 500;
     text-transform: uppercase;
-    margin: 30px 0 15px;
 }
 
 .cart-item,
@@ -833,5 +917,51 @@ h2 {
     color: #333;
     text-decoration: underline;
 }
+
+
+#btn-show-filter-panel,
+#btn-show-filter-panel-2 {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .catalog__filter {
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: gray black;
+        border: solid 10px black;
+    }
+
+    #btn-show-filter-panel {
+        display: flex;
+        z-index: 50;
+        position: fixed;
+        right: 0;
+        top: 50%;
+    }
+
+    #btn-show-filter-panel-2 {
+        display: block;
+    }
+}
+
+.show-filter-panel {
+    display: block;
+}
+
+
+@media (max-width: 450) {
+    .catalog__sort {
+        display: none;
+    }
+}
+
 
 
