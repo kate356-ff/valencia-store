@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <header>
+  <div class="container--header">
+<a class="logo__link" href="index.html"><h1>Valencia</h1></a>
+
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav--header">
+      <ul class="nav__ul">
+        <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
+      </ul>
+    </nav>
+
+    <div class="icons--header">
+      <a href="login.html" class="nav__link">LOGIN</a>
+      <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
+      <a href="basket.html" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
+    </div>
+  </div>
+</header>
+
+<main>
+    <section>
+        <form class="container container__register" id="register-page">
+    <h1>CREATE PROFILE</h1>
+
+    <p class="register-info">Create a profile and benefit from order delivery updates and return management as well as personalized recommendations</p>
+
+    <div class="form-group">
+        <label for="civility">Civility <span class="required">*</span></label>
+        <select id="civility" required>
+            <option value="">Select</option>
+            <option>Mr.</option>
+            <option>Mrs.</option>
+            <option>Ms.</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="firstname">First Name <span class="required">*</span></label>
+        <input type="text" id="firstname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lastname">Last Name <span class="required">*</span></label>
+        <input type="text" id="lastname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="birthdate">Birthdate (DD/MM/YYYY) <span class="required">*</span></label>
+        <input type="text" id="birthdate" placeholder="DD/MM/YYYY" required pattern="\d{2}/\d{2}/\d{4}">
+    </div>
+
+    <div class="form-group">
+        <label for="reg-email">Email <span class="required">*</span></label>
+        <input type="email" id="reg-email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password <span class="required">*</span></label>
+        <input type="password" id="password" required minlength="8">
+    </div>
+
+    <div class="form-group">
+        <label for="country">Country/Region of residence <span class="required">*</span></label>
+        <select id="country" required>
+            <option value="">Select</option>
+            <option>Russia</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Mobile phone number</label>
+        <div class="phone-input">
+            <select class="prefix">
+                <option>+7</option>
+                <option>+1</option>
+                <option>+44</option>
+                <option>+49</option>
+                <option>+33</option>
+            </select>
+            <input type="text" class="phone-number" pattern="\d{6,15}">
+        </div>
+    </div>
+
+    <div class="checkbox-group">
+        <div class="checkbox-item">
+            <input type="checkbox" id="privacy-policy" required>
+            <label for="privacy-policy">I have read and understood the privacy policy and I agree to the Terms of use. <span class="required">*</span></label>
+        </div>
+
+        <div class="checkbox-item">
+            <input type="checkbox" id="newsletter">
+            <label for="newsletter">I would like to receive updates about Matryoshka 2.0 new activities, exclusive products, tailored services and to have a personalised client experience based on my interests.</label>
+        </div>
+
+        <div class="checkbox-item">
+            <input type="checkbox" id="age" required>
+            <label for="age">I confirm that I am at least 18 years old <span class="required">*</span></label>
+        </div>
+    </div>
+
+    <button type="submit" class="add-to-card-btn">CREATE MY PROFILE</button>
+
+    <p class="text-center">Already have a profile? <a href="login.html" class="create-my-profile">Log in</a></p>
+</form>
+
+    </section>
+</main>
+
+<script src="js/register.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+</html>

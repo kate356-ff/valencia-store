@@ -11,23 +11,34 @@
 </head>
 <body>
     
-    <header>
-        <div class="container--header">
-            <h1>Valencia</h1>
-            <nav class="nav--header">
-                <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
-            </nav>
-            <div class="icons--header">
-                <a href="#" class="nav__link">LOGIN</a>
-                <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
-                <a href="#" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
-            </div>
-        </div>
-    </header>
+ <header>
+  <div class="container--header">
+<a class="logo__link" href="index.html"><h1>Valencia</h1></a>
+
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav--header">
+      <ul class="nav__ul">
+        <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
+      </ul>
+    </nav>
+
+    <div class="icons--header">
+      <a href="login.html" class="nav__link">LOGIN</a>
+      <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
+      <a href="basket.html" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
+    </div>
+  </div>
+</header>
+
 
     <main>
         <section>
@@ -184,14 +195,14 @@
                     </div>
                     
                 <div class="pagination">
-                    <a href="#" class="pagination__link prev">← Previous</a>
-                    <a href="#" class="pagination__link">1</a>
-                    <a href="#" class="pagination__link active">2</a>
-                    <a href="#" class="pagination__link">3</a>
-                    <a href="#" class="pagination__link">4</a>
-                    <a href="#" class="pagination__link">5</a>
-                    <a href="#" class="pagination__link next">Next →</a>
-                </div>
+    <a href="#" class="pagination__link prev">← Previous</a>
+    <a href="#" class="pagination__link">1</a>
+    <a href="#" class="pagination__link">2</a>
+    <a href="#" class="pagination__link active">3</a>
+    <a href="#" class="pagination__link">4</a>
+    <a href="#" class="pagination__link">5</a>
+    <a href="#" class="pagination__link next">Next →</a>
+</div>
                 
 
                 </div>
@@ -257,16 +268,24 @@
         </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+  <div class=" footer__container">
+    <div class="footer__left">
+      <p>© 2025 Valencia. All rights reserved.</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#" class="footer__link">About Us</a>
+      <a href="#" class="footer__link">Contact</a>
+      <a href="#" class="footer__link">Privacy Policy</a>
+      <a href="#" class="footer__link">Terms of Use</a>
+    </nav>
+  </div>
+</footer>
 
-    <!-- <button id="btn-show-filter-panel" aria-label="Показывать панель фильтрации">
-        <i class="bi bi-arrow-bar-left"></i>
-    </button> -->
-
+    <script src="js/burger.js"></script>
     <script src="js/script.js"></script>
     <script src="js/filterModal.js"></script>
     <script src="js/checkbox.js"></script>
-    <script src="js/btnShowFilter.js"></script>
 
 
 </body>

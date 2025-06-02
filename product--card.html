@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,22 +14,32 @@
 <body>
 
     <header>
-        <div class="container--header">
-            <a class="h1" href="index.html"><h1>Valencia</h1></a>
-            <nav class="nav--header">
-                <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
-                <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
-            </nav>
-            <div class="icons--header">
-                <a href="#" class="nav__link">LOGIN</a>
-                <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
-                <a href="#" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
-            </div>
-        </div>
-    </header>
+  <div class="container--header">
+<a class="logo__link" href="index.html"><h1>Valencia</h1></a>
+
+    <button class="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav--header">
+      <ul class="nav__ul">
+        <li class="nav__li"><a href="#" class="nav__link">EXPLORE</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">WOMEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">MEN</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">BAGS</a></li>
+        <li class="nav__li"><a href="#" class="nav__link">COUTURE</a></li>
+      </ul>
+    </nav>
+
+    <div class="icons--header">
+      <a href="login.html" class="nav__link">LOGIN</a>
+      <a href="#" class="icon__link" aria-label="heart"><i class="bi bi-heart"></i></a>
+      <a href="basket.html" class="icon__link" aria-label="cart"><i class="bi bi-cart"></i></a>
+    </div>
+  </div>
+</header>
 
     <main>
         <section>
@@ -42,11 +53,38 @@
                 
                 <div class="product__content">
                     <div class="product--img__wrapper">
-                        <img class="catalog-card__img" src="img/jacket1.avif" alt="">
-                        <img class="catalog-card__img" src="img/jasket12.avif" alt="">
-                        <img class="catalog-card__img" src="img/jasket13.avif" alt="">
-                        <img class="catalog-card__img" src="img/jasket14.avif" alt="">
-                    </div>
+  <!-- Мобильный слайдер -->
+  <div class="swiper mobile-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img class="catalog-card__img" src="img/jacket1.avif" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="catalog-card__img" src="img/jasket12.avif" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="catalog-card__img" src="img/jasket13.avif" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img class="catalog-card__img" src="img/jasket14.avif" alt="">
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- Десктоп: обычные картинки -->
+  <div class="desktop-gallery">
+    <img class="catalog-card__img" src="img/jacket1.avif" alt="">
+    <img class="catalog-card__img" src="img/jasket12.avif" alt="">
+    <img class="catalog-card__img" src="img/jasket13.avif" alt="">
+    <img class="catalog-card__img" src="img/jasket14.avif" alt="">
+  </div>
+</div>
+
+
 
                   
                     <div class="description__wrapper">
@@ -159,5 +197,9 @@
         </section>
     </main>
     <script src="js/accordion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/mobile-slider.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/btnSizes.js"></script>
 </body>
 </html>
