@@ -368,7 +368,7 @@ h4 {
 
 .catalog__filter {
     background-color: #ffffff;
-            border-left: solid 1px black;
+    border-left: solid 1px black;
 }
 
 h3 {
@@ -479,9 +479,7 @@ h3 {
   }
 }
 
-.catalog__filter {
-    display: none;
-}
+
 
 
 .modal .catalog__filter {
