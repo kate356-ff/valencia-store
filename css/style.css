@@ -155,7 +155,7 @@ header {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Адаптив на мобильных */
+
 @media (max-width: 768px) {
   .nav--header,
   .icons--header {
@@ -166,7 +166,7 @@ header {
     display: flex;
   }
 
-  /* Активное меню: горизонтальное с прокруткой */
+
 @media (max-width: 768px) {
   .nav--header {
     display: none;
@@ -475,7 +475,7 @@ h3 {
     top: 10px;
     right: 10px;
     font-size: 28px;
-    z-index: 1001; /* Поверх всего — даже модалки */
+    z-index: 1001; 
   }
 }
 
@@ -1514,12 +1514,12 @@ padding-top: 41px;
   }
   .cart-item {
     display: flex;
-    flex-wrap: wrap; /* чтобы элементы переносились при необходимости */
+    flex-wrap: wrap; 
     padding: 15px 0;
   }
 
   .item-image {
-    flex: 0 0 40%; /* картинка занимает 40% ширины */
+    flex: 0 0 40%; 
     max-width: 40%;
     margin-right: 15px;
   }
@@ -1531,7 +1531,7 @@ padding-top: 41px;
   }
 
   .item-details {
-    flex: 1 1 55%; /* остальное под детали */
+    flex: 1 1 55%; 
     max-width: 55%;
   }
 
