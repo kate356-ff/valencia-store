@@ -360,12 +360,15 @@ h4 {
 }
 
 
-
+.catalog__card:focus {
+  outline: 2px solid black;
+}
 
 /* filter */
 
 .catalog__filter {
     background-color: #ffffff;
+            border-left: solid 1px black;
 }
 
 h3 {
@@ -445,13 +448,11 @@ h3 {
 }
 
 .modal-content {
-    background-color: white;
     height: 100vh;
     width: 650px;
     max-width: 100%;
     overflow-y: auto;
     position: relative;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     animation: slideIn 0.3s ease-out;
 }
 
@@ -466,9 +467,17 @@ h3 {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
+    
 }
-
+@media (max-width: 768px) {
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    z-index: 1001; /* Поверх всего — даже модалки */
+  }
+}
 
 .catalog__filter {
     display: none;
@@ -495,6 +504,84 @@ body.modal-open {
 .header--filter {
     padding: 20px 15px 19px;
     border-bottom: solid black 1px;
+}
+
+
+.filter__section {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter__section h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.filter-color {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-color__item {
+  display: flex;
+  align-items: center;
+}
+
+.filter-color__checkbox {
+  display: none;
+}
+
+.filter-color__label {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.filter__actions {
+  padding: 20px 15px;
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.black-button {
+  background-color: #000;
+  color: white;
+  padding: 12px 22px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.black-button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-color {
+    flex-wrap: wrap;
+  }
+
+  .filter__actions {
+    justify-content: center;
+  }
+
+  .black-button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 
@@ -536,7 +623,11 @@ body.modal-open {
     color: black;
 }
 
-
+.filtres:focus,
+.sort__by:focus {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
 
 
 
@@ -1249,7 +1340,7 @@ a {
         overflow-x: hidden;
         scrollbar-width: thin;
         scrollbar-color: gray black;
-        border: solid 10px black;
+        border-left: solid 1px black;
     }
 
     #btn-show-filter-panel {
